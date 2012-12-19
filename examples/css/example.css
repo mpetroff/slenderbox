@@ -1,0 +1,25 @@
+body {
+    background: #222 url(../images/background.svg) repeat;
+    color: #fff;
+    font-family: Sans-Serif;
+}
+
+p {
+    font-weight: bold;
+}
+
+a {
+    outline: none;
+}
+
+img {
+    padding: 10px;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 5px;
+    border: none;
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+}
+img:hover {
+    background-color: rgba(255,255,150,0.8);
+}
