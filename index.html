@@ -7,6 +7,7 @@
     <meta name="description" content="Slenderbox : Slenderbox is a lightweight and framework-free lightbox script." />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/slenderbox.css">
 
     <title>Slenderbox</title>
   </head>
@@ -48,7 +49,21 @@
 <li>A link's <code>title</code> becomes a caption in the lightbox.</li>
 </ol><h2>Examples</h2>
 
-<p>An example is included in the <code>examples</code> directory.</p>
+<h3>Single Image</h3>
+
+<p>
+<a href="images/img0.jpg" data-sbox><img src="images/thm0.jpg" height=200 width=200 alt="Thumbnail 0"/></a>
+<a href="images/img1.jpg" title="Link title is used as a caption." data-sbox><img src="images/thm1.jpg" height=200 width=200 alt="Thumbnail 1"/></a>
+</p>
+
+<h3>Image Set</h3>
+
+<p>
+<a href="images/img2.jpg" title="Click the right side of the image to go forward." data-sbox="3"><img src="images/thm2.jpg" height=200 width=200 alt="Thumbnail 2"/></a>
+<a href="images/img3.jpg" title="One can use the arrow keys as well." data-sbox="3"><img src="images/thm3.jpg" height=200 width=200 alt="Thumbnail 3"/></a>
+<a href="images/img4.jpg" title="The next image in a gallery is automatically preloaded." data-sbox="3"><img src="images/thm4.jpg" height=200 width=200 alt="Thumbnail 4"/></a>
+<a href="images/img5.jpg" title="Press “Esc” or click the “x” or anywhere outside the image to close the lightbox." data-sbox="3"><img src="images/thm5.jpg" height=200 width=200 alt="Thumbnail 5"/></a>
+</p>
 
 <h2>Browser Compatibility</h2>
 
@@ -86,8 +101,7 @@
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright">Slenderbox maintained by <a href="https://github.com/mpetroff">mpetroff</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+        <p class="copyright">Slenderbox maintained by <a href="https://github.com/mpetroff">Matthew Petroff</a></p>
       </footer>
     </div>
 
@@ -102,6 +116,6 @@
             } catch(err) {}
           </script>
 
-
+  <script type="text/javascript" src="javascripts/slenderbox.js"></script>
   </body>
 </html>
