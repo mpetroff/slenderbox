@@ -26,6 +26,7 @@ Since Slenderbox is built with HTML5, CSS3, and SVG, it requires a modern browse
 * Chrome 5+
 * Safari 4.1+
 * Opera 12.5+
+* Internet Explorer 10+
 
 #### Partial support:
 * Firefox 3.5+

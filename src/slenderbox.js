@@ -44,6 +44,7 @@
         slenderbox = createDiv('slenderbox', sboxWrapper);
         sboxImgH = createDiv('sboxImgH', slenderbox);
         sboxLoad = createDiv('sboxLoad', sboxImgH);
+        sboxLoading = createDiv('sboxLoading', sboxLoad);
         sboxImg = createDiv('sboxImg', sboxImgH);
         sboxX = createDiv('sboxX', slenderbox);
         sboxTitle = createDiv('sboxTitle', slenderbox);

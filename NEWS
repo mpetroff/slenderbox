@@ -1,0 +1,13 @@
+                     --------------------------------------
+                                   Slenderbox
+                     https://github.com/mpetroff/slenderbox
+                     --------------------------------------
+
+
+
+Changes in Slenderbox 1.1
+=========================
+
+Improvements:
+ - Switched loading icon from a SMIL animated SVG to a CSS3 animation for full
+   IE 10 support
