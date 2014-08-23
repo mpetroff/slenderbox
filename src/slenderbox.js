@@ -22,6 +22,8 @@
  */
 
 (function(window, document, undefined){
+    'use strict';
+    
     var sboxWrapper, sboxOverlay, slenderbox, sboxImgH, sboxLoad, sboxImg,
         sboxX, sboxTitle, sboxNum, sboxNext, sboxNextA, sboxPrev, sboxPrevA,
         image, gallery, galleryNum, multipleImg;
@@ -80,14 +82,14 @@
         
         // Add image
         image = new Image();
-        image.onload = function(photo) {
+        image.onload = function() {
             // Shrink image to fit
             var origHeight = image.height, origWidth = image.width;
-            if(image.height > sboxOverlay.clientHeight - 55 - 80) {
+            if (image.height > sboxOverlay.clientHeight - 55 - 80) {
                 image.height = sboxOverlay.clientHeight - 55 - 80;
                 image.width = image.width * image.height / origHeight;
             }
-            if(image.width > sboxOverlay.clientWidth - 20 - 80) {
+            if (image.width > sboxOverlay.clientWidth - 20 - 80) {
                 image.width = sboxOverlay.clientWidth - 20 - 80;
                 image.height = origHeight * image.width / origWidth;
             }
@@ -118,7 +120,7 @@
             },300);
             
             // Preload next image
-            if(galleryNum < gallery.length - 1) {
+            if (galleryNum < gallery.length - 1) {
                 new Image().src = gallery.item(galleryNum + 1);
             }
         };
@@ -126,14 +128,14 @@
         // Get gallery information
         //gallery = document.querySelectorAll('[data-sbox="' + photo.dataset.sbox + '"]');
         gallery = document.querySelectorAll('[data-sbox="' + photo.getAttribute('data-sbox') + '"]');
-        for(var i = 0; i < gallery.length; i++) {
-            if(gallery.item(i) == photo) {
+        for (var i = 0; i < gallery.length; i++) {
+            if (gallery.item(i) == photo) {
                 galleryNum = i;
                 i = gallery.length;
             }
         }
-        //if(photo.dataset.sbox != '') {
-        if(photo.getAttribute('data-sbox') != '') {
+        //if (photo.dataset.sbox != '') {
+        if (photo.getAttribute('data-sbox') !== '') {
             multipleImg = true;
         } else {
             multipleImg = false;
@@ -144,14 +146,14 @@
         
         // Add image information and next and previous areas
         sboxTitle.innerHTML = photo.title;
-        if(gallery.length > 1 && multipleImg) {
+        if (gallery.length > 1 && multipleImg) {
             sboxNum.innerHTML = 'Image ' + (galleryNum + 1) + ' of ' + gallery.length;
-            if(galleryNum > 0) {
+            if (galleryNum > 0) {
                 sboxPrev.style.display = 'inline';
             } else {
                 sboxPrev.style.display = 'none';
             }
-            if(galleryNum < gallery.length - 1) {
+            if (galleryNum < gallery.length - 1) {
                 sboxNext.style.display = 'inline';
             } else {
                 sboxNext.style.display = 'none';
@@ -190,15 +192,15 @@
         var keyNumber = event.keyCode;
         
         // Keyboard actions
-        if(keyNumber == 39) {           // If right arrow is pressed
-            if(galleryNum < gallery.length - 1 && multipleImg) {
+        if (keyNumber == 39) {           // If right arrow is pressed
+            if (galleryNum < gallery.length - 1 && multipleImg) {
                 nextImage();
             }
-        } else if(keyNumber == 37) {    // If left arrow is pressed
-            if(galleryNum > 0 && multipleImg) {
+        } else if (keyNumber == 37) {    // If left arrow is pressed
+            if (galleryNum > 0 && multipleImg) {
                 prevImage();
             }
-        } else if(keyNumber == 27) {    // If Esc key is pressed
+        } else if (keyNumber == 27) {    // If Esc key is pressed
             destroySlenderBox();
         }
     }

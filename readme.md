@@ -41,4 +41,4 @@ The images provided with the examples are licensed under the [Creative Commons A
 
 ## Credits
 
-* [Matthew Petroff](http://www.mpetroff.net/), Original Author
+* [Matthew Petroff](http://mpetroff.net/), Original Author
